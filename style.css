@@ -1,0 +1,173 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  padding: 1rem;
+  background: #1a0a23;
+  color: #f0c0d0;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Título */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  text-shadow: 0 0 8px #ff4d6d;
+  margin-bottom: 1rem;
+  color: #ff88aa;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #ffc0cbcc;
+}
+
+/* CARROSSEL */
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(214, 51, 108, 0.3);
+  background: #2b1536;
+}
+
+.gallery-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.gallery img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 12px;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 20px #ff4d6daa;
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(214, 51, 108, 0.8);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #d6336c;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Imagens pequenas */
+.img {
+  max-width: 350px;
+  margin: 1rem auto;
+}
+
+.img img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(214, 51, 108, 0.2);
+  user-select: none;
+  cursor: pointer;
+}
+
+.img img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(214, 51, 108, 0.4);
+}
+
+/* Coracoes flutuantes simples */
+.heart {
+  position: fixed;
+  font-size: 24px;
+  color: #ff4d6d;
+  pointer-events: none;
+  user-select: none;
+  animation: floatUp 4s linear forwards;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+/* Responsividade */
+@media (min-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .gallery {
+    max-width: 480px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px #ff4d6d;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff4d6d;
+  }
+}
+
+#loveBtn.active {
+  animation: pulse 1.5s infinite;
+}
+
+#typingText {
+  font-size: 1.4rem;
+  color: #ffb6c1;
+  margin-top: 2rem;
+  white-space: pre-wrap;
+}
