@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.carousel-next');
     let currentIndex = 0;
     const typingText = document.getElementById('typingText');
-    const message = "Como eu sei que você ama essas bobeirinhas bem bregas, preparei essa homenagem pra você!";
+    const message = "Como eu sei que você ama essas bobeirinhas bem bregas, preparei essa homenagem especialmente para você!";
     let i = 0;
 
     function updateCarousel() {
