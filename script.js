@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = Array.from(track.children);
     const prevBtn = document.querySelector('.carousel-prev');
     const nextBtn = document.querySelector('.carousel-next');
-    let currentIndex = 0;
     const typingText = document.getElementById('typingText');
     const message = "Como eu sei que você ama essas bobeirinhas bem bregas, preparei essa homenagem especialmente para você!";
+    const startDate = new Date(2021, 10, 6, 16, 0, 0);
+    let currentIndex = 0;
     let i = 0;
 
     function updateCarousel() {
@@ -78,4 +79,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     setTimeout(typeWriter, 2000);
+
+    function updateTimeTogether() {
+        const now = new Date();
+        let diff = now - startDate;
+
+        const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+        diff -= years * (1000 * 60 * 60 * 24 * 365.25);
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        diff -= days * (1000 * 60 * 60 * 24);
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        diff -= hours * (1000 * 60 * 60);
+
+        const minutes = Math.floor(diff / (1000 * 60));
+        diff -= minutes * (1000 * 60);
+
+        const seconds = Math.floor(diff / 1000);
+
+        document.getElementById("timeTogether").textContent =
+            `Juntos há ${years} anos, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos 💖`;
+    }
+
+    // Atualiza automaticamente a cada segundo
+    setInterval(updateTimeTogether, 1000);
+    updateTimeTogether();
 });
