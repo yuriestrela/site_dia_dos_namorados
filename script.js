@@ -98,8 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const seconds = Math.floor(diff / 1000);
 
-        document.getElementById("timeTogether").textContent =
-            `Juntos há ${years} anos, ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos 💖`;
+        document.getElementById("timeTogether").innerHTML =
+            `Juntos há ${years} anos,<br> ${days} dias,<br> ${hours} horas,<br> ${minutes} minutos e<br> ${seconds} segundos 💖`;
+
     }
 
     // Atualiza automaticamente a cada segundo

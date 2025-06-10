@@ -173,14 +173,14 @@ p {
 }
 
 #timeTogether {
-  font-family: 'Courier New', Courier, monospace; /* fonte monoespaçada */
-  font-size: 2rem;
-  color: rgb(255, 0, 255); /* cor azul neon */
-  background-color: #111; /* fundo escuro */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  color: rgb(255, 0, 255);
+  background-color: #111;
   padding: 1rem 2rem;
   border-radius: 12px;
   width: fit-content;
-  margin: 2rem auto; /* centralizar horizontalmente */
+  margin: 2rem auto;
   box-shadow:
     0 0 10px rgb(255, 0, 255),
     0 0 20px rgb(255, 0, 255),
@@ -188,5 +188,5 @@ p {
     0 0 40px rgb(255, 0, 255);
   text-align: center;
   letter-spacing: 0.1em;
-  user-select: none; /* impede seleção, estilo relógio */
+  user-select: none; 
 }
